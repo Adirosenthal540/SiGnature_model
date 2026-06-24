@@ -1,7 +1,7 @@
 
 
 <h1 align="center">
-  SiGnature: Explicit Motion Diffusion for Stylized Semantic Gesture Generation <br> [SCA 2026]
+  SiGnature: Explicit Motion Diffusion <br> for Stylized Semantic Gesture Generation <br> [SCA 2026]
 </h1>
 
 <p align='center'>
@@ -312,7 +312,7 @@ We want to thank the following contributors that our code is based on:
 [MDM](https://github.com/GuyTevet/motion-diffusion-model), [EMAGE](https://github.com/PantoMatrix/PantoMatrix), [Syntalker](https://github.com/RobinWitch/SynTalker), [MotionCLIP](https://github.com/GuyTevet/MotionCLIP), [guided-diffusion](https://github.com/openai/guided-diffusion), [text-to-motion](https://github.com/EricGuo5513/text-to-motion), [joints2smpl](https://github.com/wangsen1312/joints2smpl), and [Semantic Gesticulator](https://github.com/LuMen-ze/Semantic-Gesticulator-Official) (SeG dataset and Tagging code).
 
 
-#### Bibtex
+## Bibtex
 If you found this project helpful in your research, please consider citing our paper.
 
 ```bibtex
