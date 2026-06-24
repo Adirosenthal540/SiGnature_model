@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+ckp/
+save/
+wandb/
+/datasets
+output_generated_gestures/
+
+.claude/settings.local.json
+signature.code-workspace
+outputs/
