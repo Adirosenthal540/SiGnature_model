@@ -1,16 +1,21 @@
-# SiGnature: Semantic-Aware Personalized Full-Body Co-Speech Gesture Generation
-
-[![arXiv](https://img.shields.io/badge/arXiv-2606.15889-b31b1b.svg)](https://arxiv.org/abs/2606.15889)
-[![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://adirosenthal540.github.io/SiGnature_web/)
-[![SCA 2026](https://img.shields.io/badge/SCA-2026-green.svg)](https://computeranimation.org/)
 
 
-**Accepted to [SCA 2026](https://computeranimation.org/) (ACM SIGGRAPH / Eurographics Symposium on Computer Animation)!**
+<h1 align="center">
+  SiGnature: Explicit Motion Diffusion for Stylized Semantic Gesture Generation <br> [SCA 2026]
+</h1>
 
-The official PyTorch implementation of the paper **"SiGnature: Semantic-Aware Personalized Full-Body Co-Speech Gesture Generation"**.
+<p align='center'>
+<a href="https://adirosenthal540.github.io/SiGnature_web/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
+<a href="https://www.youtube.com/watch?v=D5cy8M1RekU"><img src="https://img.shields.io/static/v1?label=YouTube&message=Video&color=orange"></a>
+<a href="https://arxiv.org/abs/2606.15889"><img src="https://img.shields.io/badge/arXiv-2605.00548-b31b1b.svg"></a>
+</p>
 
+
+This is the official repository of the paper **"SiGnature: Explicit Motion Diffusion for Stylized Semantic Gesture Generation"** by Adi Rosenthal, Tomer Koren, Nadav Shaked, Doron Friedman, and Ariel Shamir.
 
 ![teaser](figures/teaser.jpg)
+
+
 
 
 ## Getting started
