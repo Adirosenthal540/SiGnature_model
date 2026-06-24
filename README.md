@@ -2,7 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2606.15889-b31b1b.svg)](https://arxiv.org/abs/2606.15889)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://adirosenthal540.github.io/SiGnature_web/)
-[![SCA 2026](https://img.shields.io/badge/SCA-2026-green.svg)](https://sca2026.inria.fr/)
+[![SCA 2026](https://img.shields.io/badge/SCA-2026-green.svg)](https://computeranimation.org/)
 
 
 **Accepted to [SCA 2026](https://computeranimation.org/) (ACM SIGGRAPH / Eurographics Symposium on Computer Animation)!**
