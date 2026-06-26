@@ -316,7 +316,7 @@ We want to thank the following contributors that our code is based on:
 If you found this project helpful in your research, please consider citing our paper.
 
 ```bibtex
-@article{RosenthalSiG2026,
+@article{Rosenthal2026SiGnature,
   title   = {SiGnature: Semantic-Aware Personalized Full-Body Co-Speech Gesture Generation},
   author  = {Adi Rosenthal and Tomer Koren and Nadav Shaked and Doron Friedman and Ariel Shamir},
   year    = {2026},
