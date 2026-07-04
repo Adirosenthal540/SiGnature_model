@@ -381,7 +381,7 @@ def add_double_take_options(parser):
 
 def add_seg_options(parser):
     group = parser.add_argument_group("seg")
-    group.add_argument("--use_seg", action="store_true", help="train with amass dataset")
+    group.add_argument("--use_seg", action="store_true", help="inject semantic gestures from the SeG dataset")
     group.add_argument("-s", "--config_seg_opt_path", type=str, default=None)
 
 

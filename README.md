@@ -7,7 +7,7 @@
 <p align='center'>
 <a href="https://adirosenthal540.github.io/SiGnature_web/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
 <a href="https://www.youtube.com/watch?v=D5cy8M1RekU"><img src="https://img.shields.io/static/v1?label=YouTube&message=Video&color=orange"></a>
-<a href="https://arxiv.org/abs/2606.15889"><img src="https://img.shields.io/badge/arXiv-2605.00548-b31b1b.svg"></a>
+<a href="https://arxiv.org/abs/2606.15889"><img src="https://img.shields.io/badge/arXiv-2606.15889-b31b1b.svg"></a>
 </p>
 
 
@@ -86,7 +86,7 @@ This populates `./datasets/BEAT_SMPL/BEAT2/beat_english_v2.0.0/`, matching `data
 bash prepare/download_SeG.sh
 ```
 
-This populates `./datasets/SeG_SMPLX/`, used when sampling with `--use_seg true`.
+This populates `./datasets/SeG_SMPLX/`, used when sampling with `--use_seg`.
 </details>
 
 ### 3. Configure for your speaker
@@ -219,11 +219,11 @@ python -m sample.double_take_gestures \
   --model-path ./ckp/official_model/<checkpoint>.pt \
   --handshake_size 30 --blend_len 10 \
   --config ./dataset/emage.yaml --dataset beat2 \
-  --num_repetitions 1 --device 0 --use_seg true \
+  --num_repetitions 1 --device 0 --use_seg \
   --diffusion_steps 100 --run_videos
 ```
 
-* `--use_seg true` injects semantic gestures from the SeG dataset (`prepare/download_SeG.sh`) into the generated motion.
+* `--use_seg` injects semantic gestures from the SeG dataset (`prepare/download_SeG.sh`) into the generated motion.
 * Optionally pass `-s ./dataset/guidance_config.yaml` (or your own copy) to customize the SeG guidance settings.
 * Optionally pass `--static_pose_json <path/to/pose.json>` to anchor the sequence to a static reference pose.
 
@@ -242,7 +242,7 @@ Make sure you've completed [Configure for your speaker](#3-configure-for-your-sp
 ```shell
 python -m train.train_basemodel \
   --save-dir ./save/my_run \
-  --dataset beat2 --overwrite --cond_mode true \
+  --dataset beat2 --overwrite \
   --eval-split val --config ./dataset/emage.yaml \
   --batch-size 32 --device 0 \
   --train-platform-type WandbPlatform \
@@ -262,7 +262,7 @@ python -m train.train_basemodel \
    ```shell
    python -m train.train_basemodel \
      --save-dir ./save/amass_training \
-     --dataset beat2 --overwrite --cond_mode true \
+     --dataset beat2 --overwrite \
      --eval-split val --config ./dataset/emage.yaml \
      --batch-size 32 --device 0 \
      --train-platform-type WandbPlatform \
@@ -278,7 +278,7 @@ The BEAT2 dataset ships with word-level TextGrid transcriptions. If these are mi
 ```shell
 python -m train.train_basemodel \
   --save-dir ./save/my_run \
-  --dataset beat2 --overwrite --cond_mode true \
+  --dataset beat2 --overwrite \
   --config ./dataset/emage.yaml --rewrite_textgrid \
   --batch-size 32 --device 0 \
   --train-platform-type WandbPlatform \
@@ -292,18 +292,10 @@ This will:
 4. Use the new TextGrids for cache generation
 
 The original `textgrid/` folder is never modified. Existing Whisper transcriptions in `textgrid_whisper/` are skipped, so you can safely re-run the command if interrupted.
-<!-- 
-## Evaluation -->
 
-<!-- [`sample/run_evaluation.py`](sample/run_evaluation.py) runs the evaluation pipeline for a single checkpoint — see [sample/README_evaluation_pipeline.md](sample/README_evaluation_pipeline.md) for details.
+## VS Code quickstart
 
-```shell
-python sample/run_evaluation.py --model_path ./ckp/official_model/<checkpoint>.pt
-``` -->
-
-<!-- ## VS Code quickstart
-
-[`signature-template.code-workspace`](signature-template.code-workspace) contains ready-made debug configurations for training, sampling (with and without SeG) and audio-to-motion inference. Open it in VS Code (`File > Open Workspace from File...`), fill in the `%PATH_TO_...%` placeholders in each configuration's `args`, and run it from the "Run and Debug" panel. -->
+[`signature-template.code-workspace`](signature-template.code-workspace) contains ready-made debug configurations for training, sampling (with and without SeG) and audio-to-motion inference. Open it in VS Code (`File > Open Workspace from File...`), fill in the `%PATH_TO_...%` placeholders in each configuration's `args`, and run it from the "Run and Debug" panel.
 
 ## Acknowledgments
 
@@ -317,7 +309,7 @@ If you found this project helpful in your research, please consider citing our p
 
 ```bibtex
 @article{Rosenthal2026SiGnature,
-  title   = {SiGnature: Semantic-Aware Personalized Full-Body Co-Speech Gesture Generation},
+  title   = {SiGnature: Explicit Motion Diffusion for Stylized Semantic Gesture Generation},
   author  = {Adi Rosenthal and Tomer Koren and Nadav Shaked and Doron Friedman and Ariel Shamir},
   year    = {2026},
   Eprint = {arXiv:2606.15889},
